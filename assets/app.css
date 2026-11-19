@@ -430,3 +430,36 @@ button{font-family:inherit;cursor:pointer;}
   .ts-list{gap:8px;}
   .ts-item{font-size:12px;padding:6px 12px;}
 }
+
+/* ================= 可读性增强（字迹） ================= */
+:root{
+  --text:#E4E7EA;
+  --text2:#B9BEC5;
+  --muted:#959BA3;
+}
+body{font-size:14.5px;}
+.b-why{font-size:13.5px;color:#C3C8CE;line-height:1.9;}
+.b-kpi{font-size:12.5px;color:#A9AFB6;}
+.b-kpi b{color:#FFFFFF;}
+.b-time{font-size:11.5px;color:#8E949C;}
+.bn{font-size:12px;color:#9BA1A9;}
+.bk{font-size:13px;color:#A9AFB6;}
+.bd{font-size:13px;}
+.morn-sub{font-size:13.5px;color:#A9AFB6;}
+.mt-note{font-size:12.5px;color:#959BA3;}
+.ts-item{font-size:13.5px;color:#E4E7EA;}
+.b-name em{font-size:12px;color:#9BA1A9;}
+.b-say{font-size:15.5px;color:#F0F2F5;}
+.tag{font-size:12px;}
+.b-lvl{font-size:11.5px;}
+
+/* ================= 侧栏：掌柜带副标题 ================= */
+.sb-txt{display:flex;flex-direction:column;line-height:1.25;min-width:0;}
+.sb-txt em{font-style:normal;font-size:11.5px;color:#8E949C;margin-top:2px;letter-spacing:0;}
+.sb-item{padding:10px 12px;font-size:14px;}
+.sb-item .ico{font-size:15px;width:20px;}
+.sb-item.on .sb-txt em{color:var(--tea);}
+.sb-item.on{background:rgba(201,164,100,.16);}
+.sb-grp{font-size:11.5px;color:#8E949C;letter-spacing:1.4px;padding:16px 10px 8px;}
+.sb-item .badge{font-size:11px;padding:1px 7px;}
+.b-name em{font-size:12px;color:#A9AFB6;margin-top:3px;}
