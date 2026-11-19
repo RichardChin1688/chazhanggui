@@ -1,4 +1,4 @@
-/* 茶管家系统 · 交互 */
+/* 茶掌柜系统 · 交互 */
 (function(){
   const $=(s,r)=>(r||document).querySelector(s);
   const $$=(s,r)=>Array.from((r||document).querySelectorAll(s));
@@ -71,7 +71,7 @@
   function bubble(m){
     const d=document.createElement('div');
     d.className='msg '+(m.who==='a'?'me':'ai');
-    d.innerHTML=(m.who==='b'?`<div class="who">✦ ${m.name||'茶管家'}</div>`:'')+
+    d.innerHTML=(m.who==='b'?`<div class="who">✦ ${m.name||'茶掌柜'}</div>`:'')+
       `<div class="txt">${m.t}</div>`;
     return d;
   }
@@ -85,7 +85,7 @@
     inp.value='';
     box.scrollTop=box.scrollHeight;
     setTimeout(()=>{
-      box.appendChild(bubble({who:'b',name:'茶管家',t:'收到。这件事我看一眼账再答您——给臣一点时间，先把数捞出来。<span class="shot">正在查：订单 / 库存 / 客户档案</span>'}));
+      box.appendChild(bubble({who:'b',name:'茶掌柜',t:'收到。这件事我看一眼账再答您——稍等片刻，我先把数捞出来。<span class="shot">正在查：订单 / 库存 / 客户档案</span>'}));
       box.scrollTop=box.scrollHeight;
     },700);
   });
