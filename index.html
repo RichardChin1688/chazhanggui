@@ -292,6 +292,671 @@
 
 </section>
 
+<section class="view" id="v-stock">
+  <div class="page-head">
+    <h2>看仓掌柜</h2>
+    <div class="sub">管货和钱 · 该收多少料、哪批该动</div>
+    <div class="acts"><button class="btn">导出库存</button><button class="btn primary">＋ 新建收料单</button></div>
+  </div>
+
+  <div class="judge">
+    <div class="judge-ico">🧾</div>
+    <div class="judge-body">
+      <div class="judge-k">掌柜判断 <span>今早 7:40 生成</span></div>
+      <div class="judge-say">这批 <b>800 斤古树料</b>，建议只收 <b>500 斤</b>；另有两款压了半年以上，该在春节前动掉。</div>
+      <div class="judge-why">依据：按近 30 天动销推算，多收的 300 斤要压 11 个月，占用现金流约 <b>186 万</b>；老白茶 310 饼、金骏眉礼盒 88 盒均已超 170 天未动。</div>
+    </div>
+    <div class="judge-act">
+      <button class="btn primary">采纳建议</button>
+      <button class="btn">看测算过程</button>
+    </div>
+  </div>
+
+  <div class="grid g-kpi" style="margin-bottom:16px;">
+    <div class="kpi"><div class="k">库存总货值</div><div class="v">9,420 <small>万</small></div><div class="d flat">周转 2.34 次/年</div></div>
+    <div class="kpi"><div class="k">积压货值</div><div class="v">3,860 <small>万</small></div><div class="d down">占库存 41%</div></div>
+    <div class="kpi"><div class="k">在库批次</div><div class="v">148 <small>个</small></div><div class="d flat">涉及 62 个品项</div></div>
+    <div class="kpi"><div class="k">本月收料</div><div class="v">1,240 <small>万</small></div><div class="d up">▲ 收料价低于去年 8%</div></div>
+    <div class="kpi"><div class="k">可售不足 15 天</div><div class="v">7 <small>款</small></div><div class="d down">2 款已断货</div></div>
+  </div>
+
+  <div class="card" style="margin-bottom:16px;">
+    <div class="card-h"><h3>待您定的收料单</h3><span class="hint">3 张</span></div>
+    <div class="tbl-wrap">
+      <table class="tbl">
+        <thead><tr><th>原料</th><th>产地 / 山头</th><th class="r">报量</th><th class="r">报价</th><th class="r">掌柜建议</th><th class="c">理由</th><th class="c">操作</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>古树晒青（春料）</td><td class="sub">勐库 · 冰岛五寨</td>
+            <td class="r num">800 斤</td><td class="r num">¥ 2,300/斤</td>
+            <td class="r"><span class="tag bad">只收 500 斤</span></td>
+            <td class="c sub">多收 300 斤要压 11 个月</td>
+            <td class="c"><button class="btn sm">确认</button></td>
+          </tr>
+          <tr>
+            <td>福鼎大白（白牡丹）</td><td class="sub">福建 · 点头镇</td>
+            <td class="r num">2,000 斤</td><td class="r num">¥ 180/斤</td>
+            <td class="r"><span class="tag ok">可全收</span></td>
+            <td class="c sub">动销稳定，可售 58 天</td>
+            <td class="c"><button class="btn sm">确认</button></td>
+          </tr>
+          <tr>
+            <td>金骏眉（芽头）</td><td class="sub">武夷山 · 桐木关</td>
+            <td class="r num">600 斤</td><td class="r num">¥ 1,450/斤</td>
+            <td class="r"><span class="tag warn">暂缓</span></td>
+            <td class="c sub">礼盒线库存已够卖 176 天</td>
+            <td class="c"><button class="btn sm">暂缓</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="grid g-2-1">
+    <div class="card">
+      <div class="card-h"><h3>库存批次（按紧急程度排）</h3><span class="hint">共 148 个批次，列前 8</span><span class="more">看全表 →</span></div>
+      <div class="tbl-wrap">
+        <table class="tbl">
+          <thead><tr><th>品名</th><th>批次</th><th class="r">现存</th><th class="r">可售天数</th><th class="r">近 30 天动销</th><th class="c">建议动作</th></tr></thead>
+          <tbody>
+            <tr><td>古树晒红 357g</td><td class="sub">B2309</td><td class="r num">14 饼</td><td class="r"><span class="tag bad">6 天</span></td><td class="r num">68 饼</td><td class="c"><span class="tag warn">紧急补 40 饼</span></td></tr>
+            <tr><td>明前龙井 250g</td><td class="sub">L2403</td><td class="r num">42 袋</td><td class="r"><span class="tag bad">13 天</span></td><td class="r num">96 袋</td><td class="c"><span class="tag warn">补 60 袋</span></td></tr>
+            <tr><td>金骏眉礼盒</td><td class="sub">H2312</td><td class="r num">88 盒</td><td class="r"><span class="tag bad">176 天</span></td><td class="r num">15 盒</td><td class="c"><span class="tag bad">改组合装清仓</span></td></tr>
+            <tr><td>老白茶 350g</td><td class="sub">W2211</td><td class="r num">310 饼</td><td class="r"><span class="tag bad">210 天</span></td><td class="r num">44 饼</td><td class="c"><span class="tag warn">时令推一波</span></td></tr>
+            <tr><td>白牡丹 200g</td><td class="sub">W2405</td><td class="r num">186 袋</td><td class="r"><span class="tag ok">58 天</span></td><td class="r num">97 袋</td><td class="c"><span class="tag mute">正常</span></td></tr>
+            <tr><td>滇红金针 250g</td><td class="sub">D2402</td><td class="r num">240 袋</td><td class="r"><span class="tag ok">74 天</span></td><td class="r num">97 袋</td><td class="c"><span class="tag mute">正常</span></td></tr>
+            <tr><td>肉桂（岩茶）500g</td><td class="sub">Y2408</td><td class="r num">96 罐</td><td class="r"><span class="tag warn">38 天</span></td><td class="r num">76 罐</td><td class="c"><span class="tag warn">关注</span></td></tr>
+            <tr><td>陈皮普洱 200g</td><td class="sub">C2305</td><td class="r num">420 罐</td><td class="r"><span class="tag bad">198 天</span></td><td class="r num">63 罐</td><td class="c"><span class="tag bad">考虑搭赠</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-h"><h3>压着的钱</h3><span class="hint">按存放时长分</span></div>
+      <div class="card-b">
+        <div class="pbrow"><div class="pbk">0–90 天</div><div class="pbb"><div class="bar"><i style="width:31%"></i></div></div><div class="pbv">2,920 万</div></div>
+        <div class="pbrow"><div class="pbk">90–180 天</div><div class="pbb"><div class="bar"><i style="width:24%"></i></div></div><div class="pbv">2,260 万</div></div>
+        <div class="pbrow"><div class="pbk">180–365 天</div><div class="pbb"><div class="bar r"><i style="width:28%"></i></div></div><div class="pbv">2,640 万</div></div>
+        <div class="pbrow"><div class="pbk">一年以上</div><div class="pbb"><div class="bar r"><i style="width:13%"></i></div></div><div class="pbv">1,220 万</div></div>
+        <div class="pbnote">超过一年的部分，每一万块每月继续吃掉 <b>约 60 元</b> 的仓储与资金成本。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="view" id="v-flavor">
+  <div class="page-head">
+    <h2>风味掌柜</h2>
+    <div class="sub">管口感 · 每一批喝起来是不是一个味道</div>
+    <div class="acts"><button class="btn">导出审评记录</button><button class="btn primary">＋ 录入审评</button></div>
+  </div>
+
+  <div class="judge">
+    <div class="judge-ico">🍵</div>
+    <div class="judge-body">
+      <div class="judge-k">掌柜判断 <span>今早 6:20 生成</span></div>
+      <div class="judge-say">B2311 这批与基准差 <b>4.7%</b>，出口单暂不能发；拼配加 <b>12% 的 B2305</b> 可拉回。</div>
+      <div class="judge-why">依据：本批水浸出物偏低、滋味厚度比基准薄一档，客户能喝出"比上次淡"。补 B2305 后成本每斤只多 <b>¥3.4</b>，改完仍赶得上本周五柜期。</div>
+    </div>
+    <div class="judge-act">
+      <button class="btn primary">采纳拼配方案</button>
+      <button class="btn">看审评详情</button>
+    </div>
+  </div>
+
+  <div class="grid g-kpi" style="margin-bottom:16px;">
+    <div class="kpi"><div class="k">在库批次</div><div class="v">148 <small>个</small></div><div class="d flat">覆盖 62 个品项</div></div>
+    <div class="kpi"><div class="k">本月审评</div><div class="v">36 <small>批</small></div><div class="d up">已全部入库</div></div>
+    <div class="kpi"><div class="k">偏差超限</div><div class="v">3 <small>批</small></div><div class="d down">1 批已影响出货</div></div>
+    <div class="kpi"><div class="k">口感一致率</div><div class="v">97.3 <small>%</small></div><div class="d up">▲ 1.2pt 环比</div></div>
+    <div class="kpi"><div class="k">出口批次</div><div class="v">12 <small>批</small></div><div class="d flat">全部留样三年</div></div>
+  </div>
+
+  <div class="grid g-2-1" style="margin-bottom:16px;">
+    <div class="card">
+      <div class="card-h"><h3>本批偏差明细</h3><span class="hint">对照该品基准档</span></div>
+      <div class="tbl-wrap">
+        <table class="tbl">
+          <thead><tr><th>批次</th><th>品名</th><th>审评日期</th><th class="r">与基准差</th><th class="c">状态</th><th class="c">建议</th></tr></thead>
+          <tbody>
+            <tr><td class="num">B2311</td><td>古树晒红 357g</td><td class="sub">11-17</td><td class="r"><span class="tag bad">4.7%</span></td><td class="c"><span class="tag warn">出口暂缓</span></td><td class="c"><button class="btn sm">拼配调回</button></td></tr>
+            <tr><td class="num">W2411</td><td>白牡丹 200g</td><td class="sub">11-16</td><td class="r"><span class="tag warn">3.2%</span></td><td class="c"><span class="tag mute">观察</span></td><td class="c"><span class="sub">下批再看</span></td></tr>
+            <tr><td class="num">D2410</td><td>滇红金针 250g</td><td class="sub">11-15</td><td class="r"><span class="tag ok">1.4%</span></td><td class="c"><span class="tag ok">正常</span></td><td class="c"><span class="sub">—</span></td></tr>
+            <tr><td class="num">L0411</td><td>明前龙井 250g</td><td class="sub">11-14</td><td class="r"><span class="tag ok">0.8%</span></td><td class="c"><span class="tag ok">正常</span></td><td class="c"><span class="sub">—</span></td></tr>
+            <tr><td class="num">Y2409</td><td>肉桂（岩茶）500g</td><td class="sub">11-13</td><td class="r"><span class="tag ok">1.9%</span></td><td class="c"><span class="tag ok">正常</span></td><td class="c"><span class="sub">—</span></td></tr>
+            <tr><td class="num">C2306</td><td>陈皮普洱 200g</td><td class="sub">11-12</td><td class="r"><span class="tag warn">3.6%</span></td><td class="c"><span class="tag mute">观察</span></td><td class="c"><span class="sub">下批再看</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-h"><h3>B2311 拼配建议</h3><span class="hint">加 B2305 后</span></div>
+      <div class="card-b">
+        <div class="fbrow"><div class="fbk">香气</div><div class="fbb"><i style="width:88%"></i></div><div class="fbv">88</div></div>
+        <div class="fbrow"><div class="fbk">滋味厚度</div><div class="fbb"><i style="width:74%"></i></div><div class="fbv">74</div></div>
+        <div class="fbrow"><div class="fbk">汤色</div><div class="fbb"><i style="width:91%"></i></div><div class="fbv">91</div></div>
+        <div class="fbrow"><div class="fbk">回甘</div><div class="fbb"><i style="width:82%"></i></div><div class="fbv">82</div></div>
+        <div class="fbrow"><div class="fbk">耐泡度</div><div class="fbb"><i style="width:79%"></i></div><div class="fbv">79</div></div>
+        <div class="fbnote">综合分 <b>82.8</b>，回到基准档 <b>82.5</b> 以上。成本每斤 <b>+¥3.4</b>。</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-h"><h3>口感账 · 这家店的定盘星</h3><span class="hint">每个品项都有一份基准，新批次都拿它比</span></div>
+    <div class="card-b">
+      <div class="ledger">
+        <div class="lg-item"><div class="lg-k">古树晒红</div><div class="lg-v">基准 82.5</div><div class="lg-n">已比 24 批</div></div>
+        <div class="lg-item"><div class="lg-k">白牡丹</div><div class="lg-v">基准 79.0</div><div class="lg-n">已比 31 批</div></div>
+        <div class="lg-item"><div class="lg-k">明前龙井</div><div class="lg-v">基准 86.2</div><div class="lg-n">已比 18 批</div></div>
+        <div class="lg-item"><div class="lg-k">滇红金针</div><div class="lg-v">基准 84.1</div><div class="lg-n">已比 22 批</div></div>
+        <div class="lg-item"><div class="lg-k">肉桂岩茶</div><div class="lg-v">基准 80.6</div><div class="lg-n">已比 15 批</div></div>
+      </div>
+      <div class="lg-note">师傅请假、换人、换拼配师，都拿这本账比。比出来的不是数字，是"客户下次买到的还是这个味"。</div>
+    </div>
+  </div>
+</section>
+
+
+<section class="view" id="v-trace">
+  <div class="page-head">
+    <h2>验货掌柜</h2>
+    <div class="sub">管信任 · 客户扫一下，这批茶的底细全在眼前</div>
+    <div class="acts"><button class="btn">批量生成码</button><button class="btn primary">＋ 建批次档案</button></div>
+  </div>
+
+  <div class="judge">
+    <div class="judge-ico">🔍</div>
+    <div class="judge-body">
+      <div class="judge-k">掌柜判断 <span>今早 8:00 生成</span></div>
+      <div class="judge-say">扫码客户回头率高出 <b>31%</b>，但这门生意卡在 <b>37 个批次没建档</b>——进商超过不了审。</div>
+      <div class="judge-why">依据：本月扫码 4,860 次，扫过码的客户客单价高 <b>¥180</b>。缺档批次里有 6 个正是下季度商超入场要用的品项。</div>
+    </div>
+    <div class="judge-act">
+      <button class="btn primary">先补这 6 个</button>
+      <button class="btn">看全部缺档</button>
+    </div>
+  </div>
+
+  <div class="grid g-kpi" style="margin-bottom:16px;">
+    <div class="kpi"><div class="k">已建档批次</div><div class="v">111 <small>/ 148</small></div><div class="d warn">缺 37 个</div></div>
+    <div class="kpi"><div class="k">本月扫码</div><div class="v">4,860 <small>次</small></div><div class="d up">▲ 22.4% 环比</div></div>
+    <div class="kpi"><div class="k">扫码客户复购率</div><div class="v">68.2 <small>%</small></div><div class="d up">比未扫码高 31%</div></div>
+    <div class="kpi"><div class="k">检测报告在库</div><div class="v">286 <small>份</small></div><div class="d flat">含农残 148 份</div></div>
+    <div class="kpi"><div class="k">客单价差</div><div class="v">+¥180</div><div class="d up">扫码客户更高</div></div>
+  </div>
+
+  <div class="grid g-2-1" style="margin-bottom:16px;">
+    <div class="card">
+      <div class="card-h"><h3>建档进度</h3><span class="hint">111 / 148 · 75%</span></div>
+      <div class="card-b">
+        <div class="bar" style="height:10px;margin-bottom:18px;"><i style="width:75%"></i></div>
+        <div class="tbl-wrap">
+          <table class="tbl">
+            <thead><tr><th>缺档批次</th><th>品名</th><th class="c">用途</th><th class="c">卡在哪儿</th><th class="c">操作</th></tr></thead>
+            <tbody>
+              <tr><td class="num">B2311</td><td>古树晒红 357g</td><td class="c"><span class="tag bad">商超入场</span></td><td class="c sub">缺农残报告</td><td class="c"><button class="btn sm">补录</button></td></tr>
+              <tr><td class="num">W2411</td><td>白牡丹 200g</td><td class="c"><span class="tag bad">商超入场</span></td><td class="c sub">缺产地证明</td><td class="c"><button class="btn sm">补录</button></td></tr>
+              <tr><td class="num">D2410</td><td>滇红金针 250g</td><td class="c"><span class="tag warn">外贸</span></td><td class="c sub">缺检测原件</td><td class="c"><button class="btn sm">补录</button></td></tr>
+              <tr><td class="num">L0411</td><td>明前龙井 250g</td><td class="c"><span class="tag bad">商超入场</span></td><td class="c sub">缺采收日期</td><td class="c"><button class="btn sm">补录</button></td></tr>
+              <tr><td class="num">Y2409</td><td>肉桂（岩茶）500g</td><td class="c"><span class="tag warn">团购</span></td><td class="c sub">缺工艺记录</td><td class="c"><button class="btn sm">补录</button></td></tr>
+              <tr><td class="num">C2306</td><td>陈皮普洱 200g</td><td class="c"><span class="tag bad">商超入场</span></td><td class="c sub">缺二氧化硫检测</td><td class="c"><button class="btn sm">补录</button></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-h"><h3>客户扫到的是什么</h3><span class="hint">手机屏示意</span></div>
+      <div class="card-b" style="display:flex;justify-content:center;">
+        <div class="phone">
+          <div class="phone-top"></div>
+          <div class="phone-scr">
+            <div class="ph-brand">启橙茶业</div>
+            <div class="ph-title">古树晒红 357g</div>
+            <div class="ph-batch">批次 B2311 · 2026 年春</div>
+            <div class="ph-row"><span>产地</span><b>云南勐库 冰岛五寨</b></div>
+            <div class="ph-row"><span>采收</span><b>2026-04-12</b></div>
+            <div class="ph-row"><span>检测</span><b class="ok">农残 48 项 未检出</b></div>
+            <div class="ph-row"><span>冲泡</span><b>95℃ · 5 泡仍有余味</b></div>
+            <div class="ph-row"><span>存放</span><b>常温避光，三年内最佳</b></div>
+            <div class="ph-btn">看检测报告</div>
+            <div class="ph-btn ghost">买同款</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-h"><h3>扫码数据 · 近 30 天</h3><span class="hint">哪个品项最受欢迎，客户最关心什么</span></div>
+    <div class="card-b">
+      <div class="tbl-wrap">
+        <table class="tbl">
+          <thead><tr><th>品项</th><th class="r">扫码次数</th><th class="r">平均停留</th><th class="c">最常看</th><th class="r">扫码后购买</th></tr></thead>
+          <tbody>
+            <tr><td>古树晒红 357g</td><td class="r num">1,284</td><td class="r num">42 秒</td><td class="c"><span class="tag info">检测报告</span></td><td class="r num">372 单</td></tr>
+            <tr><td>白牡丹 200g</td><td class="r num">986</td><td class="r num">35 秒</td><td class="c"><span class="tag info">产地</span></td><td class="r num">241 单</td></tr>
+            <tr><td>明前龙井 250g</td><td class="r num">842</td><td class="r num">51 秒</td><td class="c"><span class="tag info">采收日期</span></td><td class="r num">288 单</td></tr>
+            <tr><td>滇红金针 250g</td><td class="r num">627</td><td class="r num">29 秒</td><td class="c"><span class="tag info">冲泡方法</span></td><td class="r num">164 单</td></tr>
+            <tr><td>肉桂（岩茶）500g</td><td class="r num">518</td><td class="r num">38 秒</td><td class="c"><span class="tag info">工艺</span></td><td class="r num">137 单</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="view" id="v-check">
+  <div class="page-head">
+    <h2>把关掌柜</h2>
+    <div class="sub">管不出事 · 发出去之前，先过他这一关</div>
+    <div class="acts"><button class="btn">导出记录</button><button class="btn primary">批量送审</button></div>
+  </div>
+
+  <div class="judge">
+    <div class="judge-ico">🛡</div>
+    <div class="judge-body">
+      <div class="judge-k">掌柜判断 <span>今早 6:00 生成</span></div>
+      <div class="judge-say">昨天 286 条里拦下 <b>9 条</b>，其中 <b>2 条会招事</b>：一条写"降三高"，一条写"古树纯料·绝无拼配"。</div>
+      <div class="judge-why">依据：前者属功效宣称，食品广告不得使用；后者是无法举证的绝对化用语，打假人专挑这类。九条都已给出改好的版本，等您点头即可发布。</div>
+    </div>
+    <div class="judge-act">
+      <button class="btn primary">全部采纳改稿</button>
+      <button class="btn">逐条看</button>
+    </div>
+  </div>
+
+  <div class="grid g-kpi" style="margin-bottom:16px;">
+    <div class="kpi"><div class="k">本月巡查</div><div class="v">6,240 <small>条</small></div><div class="d flat">含图文 · 视频 · 口播</div></div>
+    <div class="kpi"><div class="k">拦下待改</div><div class="v">9 <small>条</small></div><div class="d down">2 条高风险</div></div>
+    <div class="kpi"><div class="k">本月拦截率</div><div class="v">1.14 <small>%</small></div><div class="d down">▼ 0.3pt 环比</div></div>
+    <div class="kpi"><div class="k">已满半年无事故</div><div class="v">184 <small>天</small></div><div class="d up">上次处罚 2026-05</div></div>
+    <div class="kpi"><div class="k">在用口径库</div><div class="v">42 <small>条</small></div><div class="d flat">可说的话 · 已定型</div></div>
+  </div>
+
+  <div class="card" style="margin-bottom:16px;">
+    <div class="card-h"><h3>待您定的 9 条</h3><span class="hint">红色两条建议今天就改</span></div>
+    <div class="tbl-wrap">
+      <table class="tbl">
+        <thead><tr><th class="c">等级</th><th>内容摘要</th><th>踩线的地方</th><th>改好的版本</th><th class="c">操作</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="c"><span class="tag bad">高</span></td>
+            <td>短视频脚本 · 主播口播："这款茶能降三高，天天喝身体好"</td>
+            <td class="sub">功效宣称（食品禁用）</td>
+            <td class="sub">"这款茶喝着顺口，天凉了来一杯暖暖手"</td>
+            <td class="c"><button class="btn sm">采纳</button></td>
+          </tr>
+          <tr>
+            <td class="c"><span class="tag bad">高</span></td>
+            <td>详情页标题："古树纯料 · 绝无拼配"</td>
+            <td class="sub">绝对化用语，无法举证</td>
+            <td class="sub">"古树单株为主，工艺上做了一点点调和"</td>
+            <td class="c"><button class="btn sm">采纳</button></td>
+          </tr>
+          <tr>
+            <td class="c"><span class="tag warn">中</span></td>
+            <td>朋友圈文案："全网最低价，别人都做不到"</td>
+            <td class="sub">极限用语（"最低"）</td>
+            <td class="sub">"这一批的量，给到了实在价"</td>
+            <td class="c"><button class="btn sm">采纳</button></td>
+          </tr>
+          <tr>
+            <td class="c"><span class="tag warn">中</span></td>
+            <td>直播话术："喝了这个，晚上睡得香"</td>
+            <td class="sub">见效暗示</td>
+            <td class="sub">"这款性子温和，晚上喝着不闹人"</td>
+            <td class="c"><button class="btn sm">采纳</button></td>
+          </tr>
+          <tr>
+            <td class="c"><span class="tag warn">中</span></td>
+            <td>图文："有机茶园，全程零农药"</td>
+            <td class="sub">无认证不得用"有机"</td>
+            <td class="sub">"茶园按绿色标准管，每批都送检出报告"</td>
+            <td class="c"><button class="btn sm">采纳</button></td>
+          </tr>
+          <tr>
+            <td class="c"><span class="tag info">低</span></td>
+            <td>海报文案："国礼品质，值得拥有"</td>
+            <td class="sub">暗示官方背书</td>
+            <td class="sub">"拿得出手的一份茶礼"</td>
+            <td class="c"><button class="btn sm">采纳</button></td>
+          </tr>
+          <tr>
+            <td class="c"><span class="tag info">低</span></td>
+            <td>商品副标题："百年古树 · 树龄超 300 年"</td>
+            <td class="sub">树龄需可溯，缺证据</td>
+            <td class="sub">"出自冰岛五寨老茶园（附产地证明）"</td>
+            <td class="c"><button class="btn sm">采纳</button></td>
+          </tr>
+          <tr>
+            <td class="c"><span class="tag info">低</span></td>
+            <td>短视频字幕："送礼首选，无人不爱"</td>
+            <td class="sub">绝对化表达</td>
+            <td class="sub">"过节送人，稳妥又不失体面"</td>
+            <td class="c"><button class="btn sm">采纳</button></td>
+          </tr>
+          <tr>
+            <td class="c"><span class="tag info">低</span></td>
+            <td>评论回复："我们的茶比某某家的好喝多了"</td>
+            <td class="sub">贬低同行</td>
+            <td class="sub">"各有各的路子，您喜欢就好"</td>
+            <td class="c"><button class="btn sm">采纳</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="grid g-2">
+    <div class="card">
+      <div class="card-h"><h3>可说的话 · 口径库</h3><span class="hint">42 条定型话术，谁写都是这个调子</span></div>
+      <div class="card-b">
+        <div class="kp-row"><div class="kp-k">讲产地</div><div class="kp-v">"这片园子在勐库冰岛五寨，海拔一千八，采的是春天的头一茬。"</div></div>
+        <div class="kp-row"><div class="kp-k">讲口感</div><div class="kp-v">"入口甜，回甘来得快，五泡之后还有味。"</div></div>
+        <div class="kp-row"><div class="kp-k">讲检测</div><div class="kp-v">"每一批都送检，报告跟着货走，扫码就能看。"</div></div>
+        <div class="kp-row"><div class="kp-k">讲存放</div><div class="kp-v">"常温避光放着，三年之内是最好的时候。"</div></div>
+        <div class="kp-row"><div class="kp-k">讲送礼</div><div class="kp-v">"包装拿得出手，价签也写明白，送人不寒酸也不夸张。"</div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-h"><h3>近半年拦下的雷</h3><span class="hint">按类型</span></div>
+      <div class="card-b">
+        <div class="pbrow"><div class="pbk">功效宣称</div><div class="pbb"><div class="bar r"><i style="width:78%"></i></div></div><div class="pbv">27 条</div></div>
+        <div class="pbrow"><div class="pbk">极限用语</div><div class="pbb"><div class="bar r"><i style="width:52%"></i></div></div><div class="pbv">18 条</div></div>
+        <div class="pbrow"><div class="pbk">虚假举证</div><div class="pbb"><div class="bar r"><i style="width:38%"></i></div></div><div class="pbv">13 条</div></div>
+        <div class="pbrow"><div class="pbk">贬低同行</div><div class="pbb"><div class="bar r"><i style="width:20%"></i></div></div><div class="pbv">7 条</div></div>
+        <div class="pbrow"><div class="pbk">其他</div><div class="pbb"><div class="bar"><i style="width:17%"></i></div></div><div class="pbv">6 条</div></div>
+        <div class="pbnote">这 71 条若没拦住，按同类案子看，一条最少赔 <b>3 至 5 万</b>，还不算下架和罚款。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="view" id="v-cust">
+  <div class="page-head">
+    <h2>识人掌柜</h2>
+    <div class="sub">管客户 · 谁爱喝什么、谁该回来了</div>
+    <div class="acts"><button class="btn">导出名单</button><button class="btn primary">发出唤醒</button></div>
+  </div>
+
+  <div class="judge">
+    <div class="judge-ico">👥</div>
+    <div class="judge-body">
+      <div class="judge-k">掌柜判断 <span>今早 7:10 生成</span></div>
+      <div class="judge-say">6 位经销商三个月没进货，他们去年做了 <b>2,100 万</b>，占经销盘 <b>19%</b>。</div>
+      <div class="judge-why">依据：其中 3 位不是嫌贵——他们抱怨的是"一次要压三千件，卖不完不退"。竞品用小单快补把他们挖走了。话术和补货方案已备好，本周是窗口期。</div>
+    </div>
+    <div class="judge-act">
+      <button class="btn primary">发唤醒方案</button>
+      <button class="btn">看话术</button>
+    </div>
+  </div>
+
+  <div class="grid g-kpi" style="margin-bottom:16px;">
+    <div class="kpi"><div class="k">活跃经销商</div><div class="v">184 <small>家</small></div><div class="d up">▲ 11 家 环比</div></div>
+    <div class="kpi"><div class="k">沉睡 90 天以上</div><div class="v">6 <small>家</small></div><div class="d down">去年贡献 2,100 万</div></div>
+    <div class="kpi"><div class="k">会员总数</div><div class="v">3.86 <small>万</small></div><div class="d up">▲ 4,120 人 本年</div></div>
+    <div class="kpi"><div class="k">该回购到点</div><div class="v">1,284 <small>位</small></div><div class="d flat">按各自周期算的</div></div>
+    <div class="kpi"><div class="k">会员复购率</div><div class="v">43.7 <small>%</small></div><div class="d up">▲ 3.1pt 同比</div></div>
+  </div>
+
+  <div class="card" style="margin-bottom:16px;">
+    <div class="card-h"><h3>沉睡经销商</h3><span class="hint">这 6 家最该打电话</span></div>
+    <div class="tbl-wrap">
+      <table class="tbl">
+        <thead><tr><th>经销商</th><th>所在地</th><th class="r">去年进货</th><th class="r">最后进货</th><th>他抱怨什么</th><th class="c">掌柜建议</th></tr></thead>
+        <tbody>
+          <tr><td>张记茶行</td><td class="sub">东莞 · 石龙</td><td class="r num">680 万</td><td class="r sub">2026-07-18</td><td class="sub">嫌压货重，卖不完不让退</td><td class="c"><span class="tag bad">本周必谈</span></td></tr>
+          <tr><td>顺兴茶庄</td><td class="sub">佛山 · 南海</td><td class="r num">524 万</td><td class="r sub">2026-08-02</td><td class="sub">竞品给了一件代发</td><td class="c"><span class="tag bad">本周必谈</span></td></tr>
+          <tr><td>永和茶业</td><td class="sub">深圳 · 宝安</td><td class="r num">396 万</td><td class="r sub">2026-08-20</td><td class="sub">礼盒线价高，卖不动</td><td class="c"><span class="tag warn">补货方案</span></td></tr>
+          <tr><td>汇丰茶行</td><td class="sub">惠州 · 惠城</td><td class="r num">248 万</td><td class="r sub">2026-08-25</td><td class="sub">说账期太长</td><td class="c"><span class="tag warn">谈账期</span></td></tr>
+          <tr><td>华兴商贸</td><td class="sub">中山 · 石岐</td><td class="r num">168 万</td><td class="r sub">2026-09-10</td><td class="sub">转去做别的品类了</td><td class="c"><span class="tag mute">低优先</span></td></tr>
+          <tr><td>南岭茶栈</td><td class="sub">广州 · 荔湾</td><td class="r num">84 万</td><td class="r sub">2026-09-22</td><td class="sub">没有明确原因</td><td class="c"><span class="tag mute">低优先</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="grid g-2">
+    <div class="card">
+      <div class="card-h"><h3>会员口味档案</h3><span class="hint">一人一档 · 列本周该回的</span><span class="more">全部 3.86 万 →</span></div>
+      <div class="tbl-wrap">
+        <table class="tbl">
+          <thead><tr><th>客户</th><th>偏爱</th><th class="r">客单价</th><th class="r">回购周期</th><th class="c">状态</th></tr></thead>
+          <tbody>
+            <tr><td>周慧敏</td><td class="sub">明前龙井 250g，只买春茶</td><td class="r num">¥ 680</td><td class="r num">30 天</td><td class="c"><span class="tag bad">超 14 天</span></td></tr>
+            <tr><td>王德明</td><td class="sub">白牡丹，偏爱醇厚</td><td class="r num">¥ 894</td><td class="r num">45 天</td><td class="c"><span class="tag bad">超 6 天</span></td></tr>
+            <tr><td>林予安</td><td class="sub">古树晒红，一买就两饼</td><td class="r num">¥ 1,560</td><td class="r num">60 天</td><td class="c"><span class="tag warn">3 天后到点</span></td></tr>
+            <tr><td>李慕白</td><td class="sub">老白茶为主，收藏用</td><td class="r num">¥ 1,280</td><td class="r num">90 天</td><td class="c"><span class="tag ok">正常</span></td></tr>
+            <tr><td>陈瑞芳</td><td class="sub">滇红，天凉就加量</td><td class="r num">¥ 420</td><td class="r num">40 天</td><td class="c"><span class="tag warn">5 天后到点</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-h"><h3>经销商分层</h3><span class="hint">按年进货额</span></div>
+      <div class="card-b">
+        <div class="pbrow"><div class="pbk">A 类 · 300 万以上</div><div class="pbb"><div class="bar"><i style="width:26%"></i></div></div><div class="pbv">12 家</div></div>
+        <div class="pbrow"><div class="pbk">B 类 · 100–300 万</div><div class="pbb"><div class="bar"><i style="width:44%"></i></div></div><div class="pbv">38 家</div></div>
+        <div class="pbrow"><div class="pbk">C 类 · 30–100 万</div><div class="pbb"><div class="bar"><i style="width:62%"></i></div></div><div class="pbv">74 家</div></div>
+        <div class="pbrow"><div class="pbk">D 类 · 30 万以下</div><div class="pbb"><div class="bar"><i style="width:72%"></i></div></div><div class="pbv">66 家</div></div>
+        <div class="pbnote">A 类 12 家贡献 <b>1.06 亿</b>，占了经销盘近一半。这 12 家，一家都不能松。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="view" id="v-care">
+  <div class="page-head">
+    <h2>茶养掌柜</h2>
+    <div class="sub">管喝什么 · 什么时节喝哪一款</div>
+    <div class="acts"><button class="btn">看历史时令</button><button class="btn primary">发布本季茶单</button></div>
+  </div>
+
+  <div class="judge">
+    <div class="judge-ico">🌿</div>
+    <div class="judge-body">
+      <div class="judge-k">掌柜判断 <span>今早 7:00 生成</span></div>
+      <div class="judge-say">小雪已到。去年这个时令，<b>老白茶</b>卖得比平时快 <b>2.4 倍</b>；库里正好压着 310 饼。</div>
+      <div class="judge-why">依据：这一波推得准，可清掉六成库存，还不用降价——配上时令话术和茶单，直接就能发。压了 210 天的货，等不到第二次这样的机会。</div>
+    </div>
+    <div class="judge-act">
+      <button class="btn primary">发布小雪茶单</button>
+      <button class="btn">看话术</button>
+    </div>
+  </div>
+
+  <div class="grid g-kpi" style="margin-bottom:16px;">
+    <div class="kpi"><div class="k">当前节气</div><div class="v">小雪</div><div class="d flat">11-22 至 12-06</div></div>
+    <div class="kpi"><div class="k">本季在推</div><div class="v">3 <small>款</small></div><div class="d flat">老白茶 · 滇红 · 陈皮普洱</div></div>
+    <div class="kpi"><div class="k">可清库存</div><div class="v">186 <small>饼</small></div><div class="d up">折货值 47 万</div></div>
+    <div class="kpi"><div class="k">时令复购</div><div class="v">2.4 <small>倍</small></div><div class="d up">对比平日</div></div>
+    <div class="kpi"><div class="k">在册偏好</div><div class="v">3.86 <small>万</small></div><div class="d flat">含季节习惯</div></div>
+  </div>
+
+  <div class="card" style="margin-bottom:16px;">
+    <div class="card-h"><h3>四时茶单</h3><span class="hint">按节气走，当下高亮</span></div>
+    <div class="card-b">
+      <div class="seasons">
+        <div class="season"><div class="sn">春 · 立春—谷雨</div><div class="st">明前龙井 · 白牡丹</div><div class="sd">新茶上市，主打"尝鲜"</div></div>
+        <div class="season"><div class="sn">夏 · 立夏—大暑</div><div class="st">白牡丹 · 陈皮普洱</div><div class="sd">天热，主打"清爽不闹"</div></div>
+        <div class="season"><div class="sn">秋 · 立秋—霜降</div><div class="st">肉桂岩茶 · 滇红</div><div class="sd">秋燥，主打"温润顺口"</div></div>
+        <div class="season on"><div class="sn">冬 · 立冬—大寒 <span class="now">当前</span></div><div class="st">老白茶 · 滇红 · 陈皮普洱</div><div class="sd">天冷，主打"暖手的一杯"</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid g-2" style="margin-bottom:16px;">
+    <div class="card">
+      <div class="card-h"><h3>本季茶单 · 可清多少</h3><span class="hint">按去年同期推算</span></div>
+      <div class="tbl-wrap">
+        <table class="tbl">
+          <thead><tr><th>茶品</th><th class="r">现有库存</th><th class="r">预计走量</th><th class="r">清掉比例</th><th class="c">建议</th></tr></thead>
+          <tbody>
+            <tr><td>老白茶 350g</td><td class="r num">310 饼</td><td class="r num">186 饼</td><td class="r num">60%</td><td class="c"><span class="tag bad">主推</span></td></tr>
+            <tr><td>陈皮普洱 200g</td><td class="r num">420 罐</td><td class="r num">168 罐</td><td class="r num">40%</td><td class="c"><span class="tag warn">搭配推</span></td></tr>
+            <tr><td>滇红金针 250g</td><td class="r num">240 袋</td><td class="r num">96 袋</td><td class="r num">40%</td><td class="c"><span class="tag warn">搭配推</span></td></tr>
+            <tr><td>白牡丹 200g</td><td class="r num">186 袋</td><td class="r num">42 袋</td><td class="r num">23%</td><td class="c"><span class="tag mute">缓推</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-h"><h3>这段话可以直接用</h3><span class="hint">只讲原料 · 场景 · 口感</span></div>
+      <div class="card-b">
+        <div class="kpsay">"天凉了，家里备一点老白茶。放了三年，性子稳，煮一壶能喝一下午。不苦不涩，喝完胃里是暖的。"</div>
+        <div class="kpsay">"办公室吹一天空调，来一泡陈皮普洱。陈皮的香在头一口，普洱在后面托着，不冲不燥。"</div>
+        <div class="kpsay">"滇红适合早上喝，一杯下去人精神。加一点牛奶也搭，不挑人。"</div>
+        <div class="care-note">这一位干的是帮人挑茶、配茶、按时节换茶的活。杯里的东西因人而异，喝得舒服才是正经；日常饮品，不替代药物。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="view" id="v-chat">
+  <div class="page-head">
+    <h2>问掌柜</h2>
+    <div class="sub">想问什么直接说，六位掌柜各自答各自的事</div>
+  </div>
+
+  <div class="chat">
+    <div class="chat-head">
+      <div class="chat-ava">✦</div>
+      <div>
+        <div class="chat-name">六位掌柜都在</div>
+        <div class="chat-st">看仓 · 风味 · 验货 · 把关 · 识人 · 茶养</div>
+      </div>
+      <span class="chip-live" style="margin-left:auto;"><i></i>在岗</span>
+    </div>
+
+    <div class="chat-box">
+      <div class="msg me"><div class="txt">古树晒红还剩多少？要不要补？</div></div>
+
+      <div class="msg ai">
+        <div class="who">🧾 看仓掌柜</div>
+        <div class="txt">现存 <b>14 饼</b>（批次 B2309）。近 30 天出了 68 饼，日均 2.3 饼，<b>够卖 6 天</b>。<br><br>建议本周补 <b>40 饼</b>。现在补，正好接得上春节前的这一波；再晚，就得等下一批料下来。</div>
+        <div class="shot">依据：11-19 库存快照 · 近 30 天出库 68 单</div>
+      </div>
+
+      <div class="msg me"><div class="txt">哪些老客该提醒回购了？</div></div>
+
+      <div class="msg ai">
+        <div class="who">👥 识人掌柜</div>
+        <div class="txt">到点的一共 <b>1,284 位</b>，其中超期的 3 位最该先管：<br><br>· <b>周慧敏</b> — 超 14 天，只买明前龙井，去年买了 4 次<br>· <b>王德明</b> — 超 6 天，偏爱白牡丹，喜欢醇厚的<br>· <b>林予安</b> — 还有 3 天到点，古树晒红一买两饼<br><br>三位的话术都按他们的口味写好了，您点头就发。</div>
+        <div class="shot">依据：会员口味档案 · 各自回购周期</div>
+      </div>
+
+      <div class="msg ai welcome">
+        <div class="who">✦ 六位掌柜</div>
+        <div class="txt">秦老板，想问什么直接说。<br><br>比如：<br>· 这周到期的货款有多少<br>· 张记茶行为什么不进货了<br>· 这批 B2311 能不能出</div>
+      </div>
+    </div>
+
+    <form class="chat-in" id="chatForm">
+      <input type="text" id="chatIn" placeholder="问掌柜一句…（比如：这批料该不该收）" autocomplete="off">
+      <button type="submit" class="btn primary">发送</button>
+    </form>
+  </div>
+</section>
+
+<section class="view" id="v-orders">
+  <div class="page-head">
+    <h2>订单</h2>
+    <div class="sub">本月 1,842 单 · 成交 2,140 万</div>
+    <div class="acts"><button class="btn">导出</button><button class="btn primary">＋ 新建订单</button></div>
+  </div>
+
+  <div class="filter-row">
+    <button class="btn sm on" data-filter="all">全部 1,842</button>
+    <button class="btn sm" data-filter="ship">待发货 24</button>
+    <button class="btn sm" data-filter="pay">待付款 11</button>
+    <button class="btn sm" data-filter="done">已完成 1,807</button>
+  </div>
+
+  <div class="card">
+    <div class="tbl-wrap">
+      <table class="tbl">
+        <thead><tr><th>单号</th><th>客户</th><th>品项</th><th class="r">金额</th><th>渠道</th><th>日期</th><th class="c">状态</th></tr></thead>
+        <tbody>
+          <tr><td class="num">SO-2611-1842</td><td>深圳前海智远科技</td><td>企业礼盒 300 份</td><td class="r num">¥ 168,000</td><td class="sub">团购</td><td class="sub">11-19</td><td class="c"><span class="tag info">待发货</span></td></tr>
+          <tr><td class="num">SO-2611-1841</td><td>张记茶行</td><td>拼配红茶 200kg</td><td class="r num">¥ 128,000</td><td class="sub">经销</td><td class="sub">11-19</td><td class="c"><span class="tag warn">待付款</span></td></tr>
+          <tr><td class="num">SO-2611-1840</td><td>顺兴茶庄</td><td>古树晒红 60 饼</td><td class="r num">¥ 46,800</td><td class="sub">经销</td><td class="sub">11-19</td><td class="c"><span class="tag info">待发货</span></td></tr>
+          <tr><td class="num">SO-2611-1839</td><td>林予安</td><td>古树晒红 357g ×2</td><td class="r num">¥ 1,560</td><td class="sub">私域</td><td class="sub">11-19</td><td class="c"><span class="tag ok">已发货</span></td></tr>
+          <tr><td class="num">SO-2611-1838</td><td>永和茶业</td><td>礼盒线组合 120 套</td><td class="r num">¥ 86,400</td><td class="sub">经销</td><td class="sub">11-18</td><td class="c"><span class="tag ok">已签收</span></td></tr>
+          <tr><td class="num">SO-2611-1837</td><td>周慧敏</td><td>明前龙井 250g</td><td class="r num">¥ 680</td><td class="sub">私域</td><td class="sub">11-18</td><td class="c"><span class="tag ok">已签收</span></td></tr>
+          <tr><td class="num">SO-2611-1836</td><td>广州荔湾商超</td><td>白牡丹 200g ×400</td><td class="r num">¥ 119,200</td><td class="sub">商超</td><td class="sub">11-18</td><td class="c"><span class="tag info">待发货</span></td></tr>
+          <tr><td class="num">SO-2611-1835</td><td>香港恒昌贸易</td><td>滇红金针 25kg（外）</td><td class="r num">¥ 92,000</td><td class="sub">外贸</td><td class="sub">11-17</td><td class="c"><span class="tag warn">待付款</span></td></tr>
+          <tr><td class="num">SO-2611-1834</td><td>王德明</td><td>白牡丹 200g ×3</td><td class="r num">¥ 894</td><td class="sub">私域</td><td class="sub">11-17</td><td class="c"><span class="tag ok">已签收</span></td></tr>
+          <tr><td class="num">SO-2611-1833</td><td>汇丰茶行</td><td>肉桂岩茶 80 罐</td><td class="r num">¥ 43,200</td><td class="sub">经销</td><td class="sub">11-17</td><td class="c"><span class="tag ok">已发货</span></td></tr>
+          <tr><td class="num">SO-2611-1832</td><td>深圳福田商会</td><td>年会礼品 200 份</td><td class="r num">¥ 156,000</td><td class="sub">团购</td><td class="sub">11-16</td><td class="c"><span class="tag ok">已签收</span></td></tr>
+          <tr><td class="num">SO-2611-1831</td><td>李慕白</td><td>老白茶 350g</td><td class="r num">¥ 1,280</td><td class="sub">私域</td><td class="sub">11-16</td><td class="c"><span class="tag ok">已签收</span></td></tr>
+          <tr><td class="num">SO-2611-1830</td><td>南岭茶栈</td><td>陈皮普洱 120 罐</td><td class="r num">¥ 21,600</td><td class="sub">经销</td><td class="sub">11-15</td><td class="c"><span class="tag ok">已发货</span></td></tr>
+          <tr><td class="num">SO-2611-1829</td><td>陈瑞芳</td><td>滇红金针 250g ×4</td><td class="r num">¥ 1,680</td><td class="sub">私域</td><td class="sub">11-15</td><td class="c"><span class="tag ok">已签收</span></td></tr>
+          <tr><td class="num">SO-2611-1828</td><td>东莞石龙商行</td><td>金骏眉礼盒 60 套</td><td class="r num">¥ 58,800</td><td class="sub">经销</td><td class="sub">11-15</td><td class="c"><span class="tag ok">已签收</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="view" id="v-shop">
+  <div class="page-head">
+    <h2>门店与账号</h2>
+    <div class="sub">这里是系统的基本设置</div>
+  </div>
+
+  <div class="grid g-2" style="margin-bottom:16px;">
+    <div class="card">
+      <div class="card-h"><h3>主体信息</h3></div>
+      <div class="card-b">
+        <div class="kv"><span>企业名称</span><b>启橙茶业（深圳）有限公司</b></div>
+        <div class="kv"><span>门店</span><b>总店 · 深圳宝安</b></div>
+        <div class="kv"><span>主营</span><b>普洱 · 白茶 · 红茶 · 绿茶（自有茶园 + 合作基地）</b></div>
+        <div class="kv"><span>年销规模</span><b>2.14 亿（2026 年至今）</b></div>
+        <div class="kv"><span>开通时间</span><b>2025-03-18</b></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-h"><h3>六位掌柜 · 在岗状态</h3><span class="hint">可随时开停</span></div>
+      <div class="card-b">
+        <div class="swrow"><div class="swk">🧾 看仓掌柜<em>管货和钱</em></div><div class="sw on"></div></div>
+        <div class="swrow"><div class="swk">🍵 风味掌柜<em>管口感</em></div><div class="sw on"></div></div>
+        <div class="swrow"><div class="swk">🔍 验货掌柜<em>管信任</em></div><div class="sw on"></div></div>
+        <div class="swrow"><div class="swk">🛡 把关掌柜<em>管不出事</em></div><div class="sw on"></div></div>
+        <div class="swrow"><div class="swk">👥 识人掌柜<em>管客户</em></div><div class="sw on"></div></div>
+        <div class="swrow"><div class="swk">🌿 茶养掌柜<em>管喝什么</em></div><div class="sw on"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-h"><h3>账号与权限</h3><span class="hint">3 个账号</span></div>
+    <div class="tbl-wrap">
+      <table class="tbl">
+        <thead><tr><th>姓名</th><th>角色</th><th>能看什么</th><th class="c">状态</th></tr></thead>
+        <tbody>
+          <tr><td>秦老板</td><td class="sub">老板</td><td class="sub">全部，含毛利与收料决策</td><td class="c"><span class="tag ok">在用</span></td></tr>
+          <tr><td>林小雅</td><td class="sub">店长</td><td class="sub">订单 · 库存 · 客户，不含毛利</td><td class="c"><span class="tag ok">在用</span></td></tr>
+          <tr><td>周师傅</td><td class="sub">审评</td><td class="sub">口感档案 · 批次审评</td><td class="c"><span class="tag ok">在用</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
 
   </div><!-- /content -->
 </div><!-- /main -->
