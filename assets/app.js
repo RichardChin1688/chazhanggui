@@ -7,16 +7,16 @@
   const content=$('#content'), crumb=$('#crumb'), mbTitle=$('#mbTitle');
 
   const TITLES={
-    dash:['工作台','今日总览'],
-    chat:['问掌柜','随时问一句'],
-    orders:['订单','全部单子'],
-    stock:['库存与批次','货和钱'],
-    flavor:['口感档案','批次口感'],
-    cust:['客户','一人一档'],
-    trace:['验货溯源','客户扫码看'],
-    check:['内容把关','发出去之前'],
-    care:['时令配茶','喝什么合适'],
-    shop:['门店与账号','设置']
+    dash:['掌柜晨会','今日总览'],
+    stock:['看仓掌柜','管货和钱 · 该收多少料'],
+    flavor:['风味掌柜','管口感 · 批次稳不稳'],
+    trace:['验货掌柜','管信任 · 客户扫码看'],
+    check:['把关掌柜','管不出事 · 发前先过'],
+    cust:['识人掌柜','管客户 · 谁该回来了'],
+    care:['茶养掌柜','管喝什么 · 时令配茶'],
+    chat:['问掌柜','想问什么直接说'],
+    orders:['订单','全部单据'],
+    shop:['门店与账号','基本设置']
   };
 
   function closeSide(){ side.classList.remove('on'); mask&&mask.classList.remove('on'); }
