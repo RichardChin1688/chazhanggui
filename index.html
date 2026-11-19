@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>茶管家 · AI 智能管理系统</title>
+<meta name="description" content="茶管家是茶企的经营管家：一位大掌柜替老板看清全盘，六位小掌柜分头管货、管味、管信任、管风险、管客户、管时令。">
+<meta name="theme-color" content="#111214">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%23C9A464%22/><text x=%2216%22 y=%2223%22 font-size=%2218%22 text-anchor=%22middle%22 fill=%22%23111214%22 font-family=%22sans-serif%22 font-weight=%22bold%22>茶</text></svg>">
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+
+<div class="side-mask" id="sideMask"></div>
+
+<!-- ==================== 侧栏 ==================== -->
+<aside class="side" id="side">
+  <div class="side-logo">
+    <div class="logo-mark">茶</div>
+    <div>
+      <div class="logo-txt">茶管<em>家</em></div>
+      <div class="logo-sub">AI 智能管理系统</div>
+    </div>
+  </div>
+  <div class="side-scroll">
+    <div class="sb-grp">门店</div>
+    <div class="sb-item on" data-v="dash"><span class="ico">▦</span>工作台</div>
+    <div class="sb-item" data-v="chat"><span class="ico">✦</span>问掌柜<span class="badge warn">3</span></div>
+
+    <div class="sb-grp">经营</div>
+    <div class="sb-item" data-v="orders"><span class="ico">▤</span>订单<span class="badge">2</span></div>
+    <div class="sb-item" data-v="stock"><span class="ico">▥</span>库存与批次</div>
+    <div class="sb-item" data-v="flavor"><span class="ico">◈</span>口感档案</div>
+    <div class="sb-item" data-v="cust"><span class="ico">◉</span>客户</div>
+
+    <div class="sb-grp">品控与合规</div>
+    <div class="sb-item" data-v="trace"><span class="ico">▣</span>验货溯源</div>
+    <div class="sb-item" data-v="check"><span class="ico">◐</span>内容把关</div>
+
+    <div class="sb-grp">茶养</div>
+    <div class="sb-item" data-v="care"><span class="ico">✿</span>时令配茶</div>
+
+    <div class="sb-grp">设置</div>
+    <div class="sb-item" data-v="shop"><span class="ico">⚙</span>门店与账号</div>
+  </div>
+  <div class="side-foot">
+    <div class="who">
+      <div class="avatar">陈</div>
+      <div>
+        <div style="color:var(--text2);font-size:12.5px;">陈老板</div>
+        <div style="font-size:11px;">云栖茶业 · 总店</div>
+      </div>
+    </div>
+  </div>
+</aside>
+
+<!-- ==================== 主区 ==================== -->
+<div class="main">
+  <div class="mobile-bar">
+    <div class="mb-btn" id="mbBtn">☰</div>
+    <div class="mb-title" id="mbTitle">工作台</div>
+  </div>
+
+  <div class="top">
+    <div class="top-title">工作台<span class="crumb" id="crumb">今日总览</span></div>
+    <div class="top-search">
+      <span class="si">⌕</span>
+      <input type="text" placeholder="搜订单号 / 客户 / 批次…">
+    </div>
+    <div class="top-right">
+      <span class="top-date" id="today">2026-11-19 周四</span>
+      <span class="chip-live"><i></i>掌柜在岗</span>
+      <div class="avatar">陈</div>
+    </div>
+  </div>
+
+  <div class="content" id="content">
+
+    <!-- ========== 工作台 ========== -->
+    <section class="view on" id="v-dash">
+      <div class="page-head">
+        <h2>今天，店里这样</h2>
+        <div class="sub">截至 17:08 · 数据每 5 分钟更新</div>
+        <div class="acts">
+          <button class="btn">导出今日</button>
+          <button class="btn primary" data-open="newOrder">＋ 记一笔</button>
+        </div>
+      </div>
+
+      <div class="grid g-kpi" style="margin-bottom:16px;">
+        <div class="kpi">
+          <div class="k">今日成交</div>
+          <div class="v">¥ 28,640</div>
+          <div class="d up">▲ 12.4% <span style="color:var(--muted)">对比上周四</span></div>
+        </div>
+        <div class="kpi">
+          <div class="k">今日单数</div>
+          <div class="v">37 <small>单</small></div>
+          <div class="d up">▲ 5 单</div>
+        </div>
+        <div class="kpi">
+          <div class="k">库存货值</div>
+          <div class="v">¥ 1,286,400</div>
+          <div class="d flat">动销率 63.2%</div>
+        </div>
+        <div class="kpi">
+          <div class="k">本月毛利</div>
+          <div class="v">¥ 96,720</div>
+          <div class="d up">毛利率 38.6% ▲ 2.1pt</div>
+        </div>
+        <div class="kpi">
+          <div class="k">该回购客户</div>
+          <div class="v">24 <small>位</small></div>
+          <div class="d down">3 位超期未回</div>
+        </div>
+      </div>
+
+      <div class="grid g-2-1" style="margin-bottom:16px;">
+        <div class="card">
+          <div class="card-h">
+            <h3>近 14 天成交</h3>
+            <span class="hint">单位：元</span>
+            <span class="more" data-go="orders">看全部 →</span>
+          </div>
+          <div class="card-b">
+            <div class="spark" style="gap:6px;">
+              <i style="height:42%"></i><i style="height:56%"></i><i style="height:38%"></i>
+              <i style="height:64%"></i><i style="height:51%"></i><i style="height:47%"></i>
+              <i style="height:72%"></i><i style="height:61%"></i><i style="height:55%"></i>
+              <i style="height:78%"></i><i style="height:66%"></i><i style="height:83%"></i>
+              <i style="height:71%"></i><i style="height:90%"></i>
+            </div>
+            <div class="chart-base"></div>
+            <div style="display:flex;justify-content:space-between;font-size:11.5px;color:var(--muted);margin-top:8px;">
+              <span>11-06</span><span>11-12</span><span>11-19</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:11.5px;color:var(--text2);margin-top:10px;padding-top:10px;border-top:1px solid var(--line);">
+              <span>日均 <b style="color:var(--white)">¥ 23,180</b></span>
+              <span>最高 <b style="color:var(--white)">¥ 31,420</b></span>
+              <span>环比 <b class="up">▲ 12.4%</b></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-h"><h3>掌柜在盯着的事</h3><span class="more" data-go="chat">问一句 →</span></div>
+          <div class="card-b alist">
+            <div class="aitem">
+              <div class="dot r"></div>
+              <div>
+                <div class="t"><b>看仓掌柜</b>：古树晒红 B2309 只剩 14 饼，够卖 6 天</div>
+                <div class="m">建议本周内补 40 饼，按近 30 天动销算</div>
+              </div>
+            </div>
+            <div class="aitem">
+              <div class="dot a"></div>
+              <div>
+                <div class="t"><b>识人掌柜</b>：周慧敏等 <b>3 位</b>老客超 45 天未回购</div>
+                <div class="m">她上次买的是明前龙井 250g，通常 30 天一轮</div>
+              </div>
+            </div>
+            <div class="aitem">
+              <div class="dot a"></div>
+              <div>
+                <div class="t"><b>把关掌柜</b>：昨日脚本 1 条被拦下</div>
+                <div class="m">「暖胃」属功效表述，已改为「天凉喝着舒服」</div>
+              </div>
+            </div>
+            <div class="aitem">
+              <div class="dot j"></div>
+              <div>
+                <div class="t"><b>风味掌柜</b>：本批白牡丹审评已入库，与基准偏差 2.1%</div>
+                <div class="m">在允许范围内，口感稳定</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid g-2" style="margin-bottom:16px;">
+        <div class="card">
+          <div class="card-h"><h3>今日订单</h3><span class="more" data-go="orders">全部 37 单 →</span></div>
+          <div class="tbl-wrap">
+            <table class="tbl">
+              <thead><tr><th>单号</th><th>客户</th><th>品项</th><th class="r">金额</th><th class="c">状态</th></tr></thead>
+              <tbody>
+                <tr><td class="num">SO-2611-0412</td><td>林予安</td><td>古树晒红 357g ×2</td><td class="r num">¥ 1,560</td><td class="c"><span class="tag ok">已发货</span></td></tr>
+                <tr><td class="num">SO-2611-0411</td><td>深圳前海智远科技</td><td>企业礼盒 30 份</td><td class="r num">¥ 16,800</td><td class="c"><span class="tag info">待发货</span></td></tr>
+                <tr><td class="num">SO-2611-0410</td><td>周慧敏</td><td>明前龙井 250g ×1</td><td class="r num">¥ 680</td><td class="c"><span class="tag ok">已签收</span></td></tr>
+                <tr><td class="num">SO-2611-0409</td><td>王德明</td><td>白牡丹 200g ×3</td><td class="r num">¥ 894</td><td class="c"><span class="tag ok">已发货</span></td></tr>
+                <tr><td class="num">SO-2611-0408</td><td>张记茶行（经销）</td><td>拼配红茶 5kg</td><td class="r num">¥ 4,200</td><td class="c"><span class="tag warn">待付款</span></td></tr>
+                <tr><td class="num">SO-2611-0407</td><td>李慕白</td><td>老白茶 350g ×1</td><td class="r num">¥ 1,280</td><td class="c"><span class="tag ok">已签收</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-h"><h3>六位掌柜</h3><span class="hint">点开问一句</span></div>
+          <div class="card-b" style="display:flex;flex-direction:column;gap:9px;">
+            <div class="master-mini" data-go="stock"><div class="mi">🧾</div><div><div class="mn">看仓掌柜</div><div class="md">2 项补货建议</div></div><div class="st"><span class="tag warn">待处理</span></div></div>
+            <div class="master-mini" data-go="flavor"><div class="mi">🍵</div><div><div class="mn">风味掌柜</div><div class="md">本批审评已入库</div></div><div class="st"><span class="tag ok">正常</span></div></div>
+            <div class="master-mini" data-go="trace"><div class="mi">🔍</div><div><div class="mn">验货掌柜</div><div class="md">12 批档案可扫码</div></div><div class="st"><span class="tag ok">正常</span></div></div>
+            <div class="master-mini" data-go="check"><div class="mi">🛡</div><div><div class="mn">把关掌柜</div><div class="md">昨日拦下 1 条</div></div><div class="st"><span class="tag warn">有拦截</span></div></div>
+            <div class="master-mini" data-go="cust"><div class="mi">👥</div><div><div class="mn">识人掌柜</div><div class="md">24 位该回购</div></div><div class="st"><span class="tag warn">待跟进</span></div></div>
+            <div class="master-mini" data-go="care"><div class="mi">🌿</div><div><div class="mn">茶养掌柜</div><div class="md">小雪时令已上新</div></div><div class="st"><span class="tag info">上新</span></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-h"><h3>库存告急 · 该动的事</h3><span class="more" data-go="stock">库存全表 →</span></div>
+        <div class="tbl-wrap">
+          <table class="tbl">
+            <thead><tr><th>品名</th><th>批次</th><th class="r">现存</th><th class="r">可售天数</th><th class="r">近 30 天动销</th><th class="c">建议</th></tr></thead>
+            <tbody>
+              <tr><td>古树晒红 357g</td><td class="sub">B2309</td><td class="r num">14 饼</td><td class="r"><span class="tag bad">6 天</span></td><td class="r num">68 饼</td><td class="c"><span class="tag warn">补 40 饼</span></td></tr>
+              <tr><td>明前龙井 250g</td><td class="sub">L2403</td><td class="r num">42 袋</td><td class="r"><span class="tag warn">13 天</span></td><td class="r num">96 袋</td><td class="c"><span class="tag warn">补 60 袋</span></td></tr>
+              <tr><td>白牡丹 200g</td><td class="sub">W2405</td><td class="r num">186 袋</td><td class="r"><span class="tag ok">58 天</span></td><td class="r num">97 袋</td><td class="c"><span class="tag mute">正常</span></td></tr>
+              <tr><td>老白茶 350g</td><td class="sub">W2211</td><td class="r num">310 饼</td><td class="r"><span class="tag bad">210 天</span></td><td class="r num">44 饼</td><td class="c"><span class="tag warn">清仓促销</span></td></tr>
+              <tr><td>金骏眉礼盒</td><td class="sub">H2312</td><td class="r num">88 盒</td><td class="r"><span class="tag bad">176 天</span></td><td class="r num">15 盒</td><td class="c"><span class="tag warn">改组合装</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /content -->
+</div><!-- /main -->
+
+<script src="assets/app.js"></script>
+</body>
+</html>
