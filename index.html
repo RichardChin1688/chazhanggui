@@ -77,153 +77,205 @@
   <div class="content" id="content">
 
     <!-- ========== 工作台 ========== -->
-    <section class="view on" id="v-dash">
-      <div class="page-head">
-        <h2>今天，店里这样</h2>
-        <div class="sub">截至 17:08 · 数据每 5 分钟更新</div>
-        <div class="acts">
-          <button class="btn">导出今日</button>
-          <button class="btn primary" data-open="newOrder">＋ 记一笔</button>
-        </div>
+    <!-- ========== 掌柜晨会（工作台首页） ========== -->
+<section class="view on" id="v-dash">
+
+  <!-- 晨会头 -->
+  <div class="morn-head">
+    <div class="morn-left">
+      <div class="morn-hi" id="mornHi">秦老板，早</div>
+      <div class="morn-sub">六位掌柜已经在岗，今天有 <b id="mornCount">5</b> 件事等您定。</div>
+    </div>
+    <div class="morn-right">
+      <button class="btn sm">昨日复盘</button>
+      <button class="btn sm primary" data-go="chat">问一句</button>
+    </div>
+  </div>
+
+  <!-- 大数：几个亿的盘子 -->
+  <div class="bigrow">
+    <div class="big">
+      <div class="bk">今年累计销售</div>
+      <div class="bv">2.14<small>亿</small></div>
+      <div class="bd up">▲ 18.6% 同比</div>
+      <div class="bbar"><i style="width:78%"></i></div>
+      <div class="bn">年度目标 2.75 亿 · 已完成 78%</div>
+    </div>
+    <div class="big">
+      <div class="bk">库存周转</div>
+      <div class="bv">2.34<small>次/年</small></div>
+      <div class="bd down">▼ 0.18 · 落后行业均值</div>
+      <div class="bbar j"><i style="width:47%"></i></div>
+      <div class="bn">积压货值 3,860 万 · 占总库存 41%</div>
+    </div>
+    <div class="big">
+      <div class="bk">综合毛利率</div>
+      <div class="bv">41.2<small>%</small></div>
+      <div class="bd up">▲ 2.4pt 同比</div>
+      <div class="bbar"><i style="width:69%"></i></div>
+      <div class="bn">礼品线 46.8% · 口粮线 32.1%</div>
+    </div>
+    <div class="big">
+      <div class="bk">在途货款</div>
+      <div class="bv">1,864<small>万</small></div>
+      <div class="bd down">▲ 6 位经销商超 60 天</div>
+      <div class="bbar r"><i style="width:62%"></i></div>
+      <div class="bn">占总应收 34% · 建议今日催收</div>
+    </div>
+  </div>
+
+  <!-- 六位掌柜晨报 -->
+  <div class="morn-title">
+    <span>今日掌柜晨报</span>
+    <span class="mt-line"></span>
+    <span class="mt-note">每人只说一件最要紧的</span>
+  </div>
+
+  <div class="briefs">
+
+    <!-- 看仓 -->
+    <article class="brief" data-go="stock">
+      <div class="b-head">
+        <div class="b-ico">🧾</div>
+        <div class="b-name">看仓掌柜<em>管货和钱</em></div>
+        <div class="b-lvl red">急</div>
       </div>
-
-      <div class="grid g-kpi" style="margin-bottom:16px;">
-        <div class="kpi">
-          <div class="k">今日成交</div>
-          <div class="v">¥ 28,640</div>
-          <div class="d up">▲ 12.4% <span style="color:var(--muted)">对比上周四</span></div>
-        </div>
-        <div class="kpi">
-          <div class="k">今日单数</div>
-          <div class="v">37 <small>单</small></div>
-          <div class="d up">▲ 5 单</div>
-        </div>
-        <div class="kpi">
-          <div class="k">库存货值</div>
-          <div class="v">¥ 1,286,400</div>
-          <div class="d flat">动销率 63.2%</div>
-        </div>
-        <div class="kpi">
-          <div class="k">本月毛利</div>
-          <div class="v">¥ 96,720</div>
-          <div class="d up">毛利率 38.6% ▲ 2.1pt</div>
-        </div>
-        <div class="kpi">
-          <div class="k">该回购客户</div>
-          <div class="v">24 <small>位</small></div>
-          <div class="d down">3 位超期未回</div>
-        </div>
+      <div class="b-say">
+        “这批 <b>800 斤古树料</b>，我建议您只收 <b>500 斤</b>。”
       </div>
-
-      <div class="grid g-2-1" style="margin-bottom:16px;">
-        <div class="card">
-          <div class="card-h">
-            <h3>近 14 天成交</h3>
-            <span class="hint">单位：元</span>
-            <span class="more" data-go="orders">看全部 →</span>
-          </div>
-          <div class="card-b">
-            <div class="spark" style="gap:6px;">
-              <i style="height:42%"></i><i style="height:56%"></i><i style="height:38%"></i>
-              <i style="height:64%"></i><i style="height:51%"></i><i style="height:47%"></i>
-              <i style="height:72%"></i><i style="height:61%"></i><i style="height:55%"></i>
-              <i style="height:78%"></i><i style="height:66%"></i><i style="height:83%"></i>
-              <i style="height:71%"></i><i style="height:90%"></i>
-            </div>
-            <div class="chart-base"></div>
-            <div style="display:flex;justify-content:space-between;font-size:11.5px;color:var(--muted);margin-top:8px;">
-              <span>11-06</span><span>11-12</span><span>11-19</span>
-            </div>
-            <div style="display:flex;justify-content:space-between;font-size:11.5px;color:var(--text2);margin-top:10px;padding-top:10px;border-top:1px solid var(--line);">
-              <span>日均 <b style="color:var(--white)">¥ 23,180</b></span>
-              <span>最高 <b style="color:var(--white)">¥ 31,420</b></span>
-              <span>环比 <b class="up">▲ 12.4%</b></span>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-h"><h3>掌柜在盯着的事</h3><span class="more" data-go="chat">问一句 →</span></div>
-          <div class="card-b alist">
-            <div class="aitem">
-              <div class="dot r"></div>
-              <div>
-                <div class="t"><b>看仓掌柜</b>：古树晒红 B2309 只剩 14 饼，够卖 6 天</div>
-                <div class="m">建议本周内补 40 饼，按近 30 天动销算</div>
-              </div>
-            </div>
-            <div class="aitem">
-              <div class="dot a"></div>
-              <div>
-                <div class="t"><b>识人掌柜</b>：周慧敏等 <b>3 位</b>老客超 45 天未回购</div>
-                <div class="m">她上次买的是明前龙井 250g，通常 30 天一轮</div>
-              </div>
-            </div>
-            <div class="aitem">
-              <div class="dot a"></div>
-              <div>
-                <div class="t"><b>把关掌柜</b>：昨日脚本 1 条被拦下</div>
-                <div class="m">「暖胃」属功效表述，已改为「天凉喝着舒服」</div>
-              </div>
-            </div>
-            <div class="aitem">
-              <div class="dot j"></div>
-              <div>
-                <div class="t"><b>风味掌柜</b>：本批白牡丹审评已入库，与基准偏差 2.1%</div>
-                <div class="m">在允许范围内，口感稳定</div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="b-why">
+        按现在动销，多收的 300 斤要压 <b>11 个月</b>，
+        吃掉的现金流约 <b>¥186 万</b>。而明年 4 月前云南还有两批同山头的料会到，
+        价格可能低 8%。
       </div>
-
-      <div class="grid g-2" style="margin-bottom:16px;">
-        <div class="card">
-          <div class="card-h"><h3>今日订单</h3><span class="more" data-go="orders">全部 37 单 →</span></div>
-          <div class="tbl-wrap">
-            <table class="tbl">
-              <thead><tr><th>单号</th><th>客户</th><th>品项</th><th class="r">金额</th><th class="c">状态</th></tr></thead>
-              <tbody>
-                <tr><td class="num">SO-2611-0412</td><td>林予安</td><td>古树晒红 357g ×2</td><td class="r num">¥ 1,560</td><td class="c"><span class="tag ok">已发货</span></td></tr>
-                <tr><td class="num">SO-2611-0411</td><td>深圳前海智远科技</td><td>企业礼盒 30 份</td><td class="r num">¥ 16,800</td><td class="c"><span class="tag info">待发货</span></td></tr>
-                <tr><td class="num">SO-2611-0410</td><td>周慧敏</td><td>明前龙井 250g ×1</td><td class="r num">¥ 680</td><td class="c"><span class="tag ok">已签收</span></td></tr>
-                <tr><td class="num">SO-2611-0409</td><td>王德明</td><td>白牡丹 200g ×3</td><td class="r num">¥ 894</td><td class="c"><span class="tag ok">已发货</span></td></tr>
-                <tr><td class="num">SO-2611-0408</td><td>张记茶行（经销）</td><td>拼配红茶 5kg</td><td class="r num">¥ 4,200</td><td class="c"><span class="tag warn">待付款</span></td></tr>
-                <tr><td class="num">SO-2611-0407</td><td>李慕白</td><td>老白茶 350g ×1</td><td class="r num">¥ 1,280</td><td class="c"><span class="tag ok">已签收</span></td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-h"><h3>六位掌柜</h3><span class="hint">点开问一句</span></div>
-          <div class="card-b" style="display:flex;flex-direction:column;gap:9px;">
-            <div class="master-mini" data-go="stock"><div class="mi">🧾</div><div><div class="mn">看仓掌柜</div><div class="md">2 项补货建议</div></div><div class="st"><span class="tag warn">待处理</span></div></div>
-            <div class="master-mini" data-go="flavor"><div class="mi">🍵</div><div><div class="mn">风味掌柜</div><div class="md">本批审评已入库</div></div><div class="st"><span class="tag ok">正常</span></div></div>
-            <div class="master-mini" data-go="trace"><div class="mi">🔍</div><div><div class="mn">验货掌柜</div><div class="md">12 批档案可扫码</div></div><div class="st"><span class="tag ok">正常</span></div></div>
-            <div class="master-mini" data-go="check"><div class="mi">🛡</div><div><div class="mn">把关掌柜</div><div class="md">昨日拦下 1 条</div></div><div class="st"><span class="tag warn">有拦截</span></div></div>
-            <div class="master-mini" data-go="cust"><div class="mi">👥</div><div><div class="mn">识人掌柜</div><div class="md">24 位该回购</div></div><div class="st"><span class="tag warn">待跟进</span></div></div>
-            <div class="master-mini" data-go="care"><div class="mi">🌿</div><div><div class="mn">茶养掌柜</div><div class="md">小雪时令已上新</div></div><div class="st"><span class="tag info">上新</span></div></div>
-          </div>
-        </div>
+      <div class="b-kpi">
+        <span>积压货值 <b>3,860 万</b></span>
+        <span>可售天数 <b class="r">6 天</b></span>
       </div>
+      <div class="b-act"><span class="b-btn">看收料测算 →</span><span class="b-time">今早 7:40 生成</span></div>
+    </article>
 
-      <div class="card">
-        <div class="card-h"><h3>库存告急 · 该动的事</h3><span class="more" data-go="stock">库存全表 →</span></div>
-        <div class="tbl-wrap">
-          <table class="tbl">
-            <thead><tr><th>品名</th><th>批次</th><th class="r">现存</th><th class="r">可售天数</th><th class="r">近 30 天动销</th><th class="c">建议</th></tr></thead>
-            <tbody>
-              <tr><td>古树晒红 357g</td><td class="sub">B2309</td><td class="r num">14 饼</td><td class="r"><span class="tag bad">6 天</span></td><td class="r num">68 饼</td><td class="c"><span class="tag warn">补 40 饼</span></td></tr>
-              <tr><td>明前龙井 250g</td><td class="sub">L2403</td><td class="r num">42 袋</td><td class="r"><span class="tag warn">13 天</span></td><td class="r num">96 袋</td><td class="c"><span class="tag warn">补 60 袋</span></td></tr>
-              <tr><td>白牡丹 200g</td><td class="sub">W2405</td><td class="r num">186 袋</td><td class="r"><span class="tag ok">58 天</span></td><td class="r num">97 袋</td><td class="c"><span class="tag mute">正常</span></td></tr>
-              <tr><td>老白茶 350g</td><td class="sub">W2211</td><td class="r num">310 饼</td><td class="r"><span class="tag bad">210 天</span></td><td class="r num">44 饼</td><td class="c"><span class="tag warn">清仓促销</span></td></tr>
-              <tr><td>金骏眉礼盒</td><td class="sub">H2312</td><td class="r num">88 盒</td><td class="r"><span class="tag bad">176 天</span></td><td class="r num">15 盒</td><td class="c"><span class="tag warn">改组合装</span></td></tr>
-            </tbody>
-          </table>
-        </div>
+    <!-- 风味 -->
+    <article class="brief" data-go="flavor">
+      <div class="b-head">
+        <div class="b-ico">🍵</div>
+        <div class="b-name">风味掌柜<em>管口感和品质</em></div>
+        <div class="b-lvl amber">注意</div>
       </div>
-    </section>
+      <div class="b-say">
+        “B2311 这批和基准差 <b>4.7%</b>，出口单不能发。”
+      </div>
+      <div class="b-why">
+        客户喝着会觉出“比上次淡”。拼配加 <b>12% 的 B2305</b> 能拉回基准，
+        成本每斤只多 <b>¥3.4</b>。改完这一批还能赶上本周五的柜期。
+      </div>
+      <div class="b-kpi">
+        <span>在库批次 <b>148 个</b></span>
+        <span>本月偏差超限 <b class="r">3 批</b></span>
+      </div>
+      <div class="b-act"><span class="b-btn">看拼配方案 →</span><span class="b-time">今早 6:20 生成</span></div>
+    </article>
+
+    <!-- 验货 -->
+    <article class="brief" data-go="trace">
+      <div class="b-head">
+        <div class="b-ico">🔍</div>
+        <div class="b-name">验货掌柜<em>管信任</em></div>
+        <div class="b-lvl jade">好</div>
+      </div>
+      <div class="b-say">
+        “本月扫码 <b>4,860 次</b>，二次购买率比没扫的高 <b>31%</b>。”
+      </div>
+      <div class="b-why">
+        扫码看过检测报告的客户，客单价比普通客户高 <b>¥180</b>。
+        但还有 <b>37 个批次</b>没建档案——那几个正要进商超，缺了就过不了审。
+      </div>
+      <div class="b-kpi">
+        <span>建档批次 <b>111 / 148</b></span>
+        <span>缺档 <b class="r">37 个</b></span>
+      </div>
+      <div class="b-act"><span class="b-btn">补建档 →</span><span class="b-time">今早 8:00 生成</span></div>
+    </article>
+
+    <!-- 把关 -->
+    <article class="brief" data-go="check">
+      <div class="b-head">
+        <div class="b-ico">🛡</div>
+        <div class="b-name">把关掌柜<em>管不出事</em></div>
+        <div class="b-lvl red">急</div>
+      </div>
+      <div class="b-say">
+        “昨天 <b>286 条</b>内容里，拦下 <b>9 条</b>，其中 2 条会招事。”
+      </div>
+      <div class="b-why">
+        一条写了“降三高”，一条写了“古树纯料·绝无拼配”——
+        后者是<b>虚假宣传</b>，打假人专挑这种。都已改好，等您点头发布。
+      </div>
+      <div class="b-kpi">
+        <span>本月巡查 <b>6,240 条</b></span>
+        <span>风险拦截 <b class="r">71 条</b></span>
+      </div>
+      <div class="b-act"><span class="b-btn">看这 9 条 →</span><span class="b-time">今早 6:00 生成</span></div>
+    </article>
+
+    <!-- 识人 -->
+    <article class="brief" data-go="cust">
+      <div class="b-head">
+        <div class="b-ico">👥</div>
+        <div class="b-name">识人掌柜<em>管客户</em></div>
+        <div class="b-lvl amber">注意</div>
+      </div>
+      <div class="b-say">
+        “<b>6 位经销商</b>三个月没进货了，他们去年做了 <b>2,100 万</b>。”
+      </div>
+      <div class="b-why">
+        这 6 位去年合计占您经销盘 <b>19%</b>。其中 3 位是被竞品用
+        “小单快补”挖走的，不是嫌贵。我把话术和补货方案都备好了。
+      </div>
+      <div class="b-kpi">
+        <span>活跃经销商 <b>184 家</b></span>
+        <span>沉睡 <b class="r">6 家</b></span>
+      </div>
+      <div class="b-act"><span class="b-btn">看唤醒方案 →</span><span class="b-time">今早 7:10 生成</span></div>
+    </article>
+
+    <!-- 茶养 -->
+    <article class="brief" data-go="care">
+      <div class="b-head">
+        <div class="b-ico">🌿</div>
+        <div class="b-name">茶养掌柜<em>管喝什么合适</em></div>
+        <div class="b-lvl jade">好</div>
+      </div>
+      <div class="b-say">
+        “小雪到了，去年这个时令，<b>老白茶</b>卖得比平时快 <b>2.4 倍</b>。”
+      </div>
+      <div class="b-why">
+        库存里有 <b>310 饼</b>老白茶压着 210 天。这一波时令推一把，
+        能清掉 <b>六成</b>，还不用降价——配好时令话术直接发就行。
+      </div>
+      <div class="b-kpi">
+        <span>时令在推 <b>3 款</b></span>
+        <span>可清库存 <b class="j">186 饼</b></span>
+      </div>
+      <div class="b-act"><span class="b-btn">看时令方案 →</span><span class="b-time">今早 7:00 生成</span></div>
+    </article>
+
+  </div>
+
+  <!-- 底部：待您定的事 -->
+  <div class="todo-strip">
+    <div class="ts-h">今天等您点头的 <b>5</b> 件事</div>
+    <div class="ts-list">
+      <div class="ts-item"><span class="tag bad">急</span>古树料收 500 斤还是 800 斤</div>
+      <div class="ts-item"><span class="tag bad">急</span>9 条被拦内容，确认改好的版本</div>
+      <div class="ts-item"><span class="tag warn">今日</span>6 位沉睡经销商的唤醒方案</div>
+      <div class="ts-item"><span class="tag warn">今日</span>B2311 拼配调整，赶周五柜期</div>
+      <div class="ts-item"><span class="tag info">本周</span>37 个批次补建档，进商超要用</div>
+    </div>
+  </div>
+
+</section>
+
 
   </div><!-- /content -->
 </div><!-- /main -->
